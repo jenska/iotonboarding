@@ -175,7 +175,7 @@ type GetUsersUsingGETOKBodyItems0 struct {
 	// Unix time in milliseconds. The timestamp indicates when the user was added to the the platform. This field is an immutable.
 	// Read Only: true
 	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
+	//	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
 
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*GetUsersUsingGETOKBodyItems0CustomPropertiesItems0 `json:"customProperties"`
@@ -187,12 +187,12 @@ type GetUsersUsingGETOKBodyItems0 struct {
 	// This value identifies when the user was last updated.
 	// Read Only: true
 	// Format: date-time
-	LastUpdatedTimestamp strfmt.DateTime `json:"lastUpdatedTimestamp,omitempty"`
+	//	LastUpdatedTimestamp strfmt.DateTime `json:"lastUpdatedTimestamp,omitempty"`
 
 	// This value identifies the locked timestamp if the account is locked.
 	// Read Only: true
 	// Format: date-time
-	LockedTimestamp strfmt.DateTime `json:"lockedTimestamp,omitempty"`
+	//	LockedTimestamp strfmt.DateTime `json:"lockedTimestamp,omitempty"`
 
 	// This value identifies the number of login attempts before being locked.
 	// Read Only: true
@@ -270,15 +270,15 @@ func (o *GetUsersUsingGETOKBodyItems0) validateAuthentications(formats strfmt.Re
 }
 
 func (o *GetUsersUsingGETOKBodyItems0) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 
@@ -308,28 +308,28 @@ func (o *GetUsersUsingGETOKBodyItems0) validateCustomProperties(formats strfmt.R
 }
 
 func (o *GetUsersUsingGETOKBodyItems0) validateLastUpdatedTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.LastUpdatedTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.LastUpdatedTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("lastUpdatedTimestamp", "body", "date-time", o.LastUpdatedTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("lastUpdatedTimestamp", "body", "date-time", o.LastUpdatedTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 
 func (o *GetUsersUsingGETOKBodyItems0) validateLockedTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.LockedTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.LockedTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("lockedTimestamp", "body", "date-time", o.LockedTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("lockedTimestamp", "body", "date-time", o.LockedTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 

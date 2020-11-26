@@ -1,0 +1,50 @@
+{
+    "device": {
+
+    },
+    "tenant": {
+      "name": "Sample Tenant"
+    },
+    "sensortypes": [],
+    "capabilities": [
+        {
+            "alternateId": "pumpSensorCapabilities",
+            "name": "pumpSensorCapabilities",
+            "properties": [
+              {
+                "dataType": "integer",
+                "formatter": {
+                  "dataType": "integer",
+                  "scale": 0,
+                  "shift": 0,
+                  "swap": true
+                },
+                "name": "temperature",
+                "unitOfMeasure": "°C"
+              },
+              {
+                "dataType": "integer",
+                "formatter": {
+                  "dataType": "integer",
+                  "scale": 0,
+                  "shift": 0,
+                  "swap": true
+                },
+                "name": "pressure",
+                "unitOfMeasure": "mBar"
+              },
+              {
+                "dataType": "integer",
+                "formatter": {
+                  "dataType": "integer",
+                  "scale": 0,
+                  "shift": 0,
+                  "swap": true
+                },
+                "name": "engine",
+                "unitOfMeasure": "rpm"
+              }
+            ]
+          }
+    ]
+}
