@@ -178,7 +178,7 @@ type GetDevicesUsingGETOKBodyItems0 struct {
 	// Unix time in milliseconds. The timestamp indicates when the device was added to the the platform. This field is an immutable.
 	// Read Only: true
 	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
+	// CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
 
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*GetDevicesUsingGETOKBodyItems0CustomPropertiesItems0 `json:"customProperties"`
@@ -292,15 +292,15 @@ func (o *GetDevicesUsingGETOKBodyItems0) validateAuthorizations(formats strfmt.R
 }
 
 func (o *GetDevicesUsingGETOKBodyItems0) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 

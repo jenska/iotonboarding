@@ -2,6 +2,10 @@
 
 SAP IoT device auto onboarding demo.
 
+# Status
+
+Stuck because of issues dealing with PBES2 certs.
+
 ## What's this? 
 
 PoC app creates a new IoT device via API, connects to the device and sends some random data to the SAP IoT service.
@@ -32,6 +36,7 @@ Delete faulty attributes in the reszulting api1.json file and generate the clien
 swagger generate client -f api1.json
 ```
 
-## SAP IoT Device Management API Bugs
+## SAP IoT Device Management API inconsitencies
 
-`/v1/users` Returns all users, but with timestamps in unix format instead of expected DateTime format
+* GET `/v1/users` Returns all users, but with timestamps in unix format instead of expected DateTime format
+* POST to `/v1/tenant/{tenandId}/devices requires unix timestamp instead of DateTime format

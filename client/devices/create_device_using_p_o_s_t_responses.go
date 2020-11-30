@@ -216,11 +216,6 @@ type CreateDeviceUsingPOSTBody struct {
 	// Read Only: true
 	Authorizations []*CreateDeviceUsingPOSTParamsBodyAuthorizationsItems0 `json:"authorizations"`
 
-	// Unix time in milliseconds. The timestamp indicates when the device was added to the the platform. This field is an immutable.
-	// Read Only: true
-	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
-
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*CreateDeviceUsingPOSTParamsBodyCustomPropertiesItems0 `json:"customProperties"`
 
@@ -333,15 +328,15 @@ func (o *CreateDeviceUsingPOSTBody) validateAuthorizations(formats strfmt.Regist
 }
 
 func (o *CreateDeviceUsingPOSTBody) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("request"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("request"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 
@@ -501,7 +496,7 @@ type CreateDeviceUsingPOSTOKBody struct {
 	// Unix time in milliseconds. The timestamp indicates when the device was added to the the platform. This field is an immutable.
 	// Read Only: true
 	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
+	// CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
 
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*CreateDeviceUsingPOSTOKBodyCustomPropertiesItems0 `json:"customProperties"`
@@ -615,15 +610,15 @@ func (o *CreateDeviceUsingPOSTOKBody) validateAuthorizations(formats strfmt.Regi
 }
 
 func (o *CreateDeviceUsingPOSTOKBody) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("createDeviceUsingPOSTOK"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("createDeviceUsingPOSTOK"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 

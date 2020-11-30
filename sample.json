@@ -1,15 +1,40 @@
 {
     "device": {
-
+      "alternateId": "pumpDevice",
+      "customProperties": [
+        {
+          "key": "createdBy",
+          "value": "iotonboarding"
+        }
+      ],
+      "gatewayId": "2",
+      "name": "pumpDevice",
+      "sensors": [
+        {
+          "alternateId": "pumpDevice",
+          "name": "pumpSensor",
+          "sensorTypeId": "pumpSensorType"
+        }
+      ]
     },
     "tenant": {
       "name": "Sample Tenant"
     },
-    "sensortypes": [],
+    "sensortypes": [
+      {
+        "capabilities": [
+          {
+            "id": "pumpSensorCapability",
+            "type": "measure"
+          }
+        ],
+        "name": "pumpSensorType"
+      }
+    ],
     "capabilities": [
         {
-            "alternateId": "pumpSensorCapabilities",
-            "name": "pumpSensorCapabilities",
+            "alternateId": "pumpSensorCapability",
+            "name": "pumpSensorCapability",
             "properties": [
               {
                 "dataType": "integer",

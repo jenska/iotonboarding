@@ -219,7 +219,7 @@ type UpdateDeviceUsingPUTBody struct {
 	// Unix time in milliseconds. The timestamp indicates when the device was added to the the platform. This field is an immutable.
 	// Read Only: true
 	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
+	// CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
 
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*UpdateDeviceUsingPUTParamsBodyCustomPropertiesItems0 `json:"customProperties"`
@@ -333,15 +333,15 @@ func (o *UpdateDeviceUsingPUTBody) validateAuthorizations(formats strfmt.Registr
 }
 
 func (o *UpdateDeviceUsingPUTBody) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("request"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("request"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 
@@ -501,7 +501,7 @@ type UpdateDeviceUsingPUTOKBody struct {
 	// Unix time in milliseconds. The timestamp indicates when the device was added to the the platform. This field is an immutable.
 	// Read Only: true
 	// Format: date-time
-	CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
+	// CreationTimestamp strfmt.DateTime `json:"creationTimestamp,omitempty"`
 
 	// A set of user defined properties represented as key value pair.
 	CustomProperties []*UpdateDeviceUsingPUTOKBodyCustomPropertiesItems0 `json:"customProperties"`
@@ -615,15 +615,15 @@ func (o *UpdateDeviceUsingPUTOKBody) validateAuthorizations(formats strfmt.Regis
 }
 
 func (o *UpdateDeviceUsingPUTOKBody) validateCreationTimestamp(formats strfmt.Registry) error {
+	/*
+		if swag.IsZero(o.CreationTimestamp) { // not required
+			return nil
+		}
 
-	if swag.IsZero(o.CreationTimestamp) { // not required
-		return nil
-	}
-
-	if err := validate.FormatOf("updateDeviceUsingPUTOK"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
-		return err
-	}
-
+		if err := validate.FormatOf("updateDeviceUsingPUTOK"+"."+"creationTimestamp", "body", "date-time", o.CreationTimestamp.String(), formats); err != nil {
+			return err
+		}
+	*/
 	return nil
 }
 
